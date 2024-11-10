@@ -122,7 +122,8 @@ async def main() -> None:
     # Load model
     _LOGGER.debug("Loading %s", args.model)
     whisper_model = faster_whisper.WhisperModel(
-        args.model,
+        "large-v3",
+        #args.model,
         download_root=args.download_dir,
         device=args.device,
         compute_type=args.compute_type,

@@ -1,4 +1,8 @@
-# Wyoming Faster Whisper
+# Wyoming Faster Whisper for NVIDIA
+
+I just hardcoded nvidia and the large model to be used. I created a Dockerfile and docker-compose so you just clone this repo and docker compose up and off you go!
+
+NOTE that run.sh has the GPU to use in CUDA_VISIBLE_DEVICES. I happen to have 3 GPUs and use the 3rd one. Change to 0 or to whatever you want
 
 [Wyoming protocol](https://github.com/rhasspy/wyoming) server for the [faster-whisper](https://github.com/guillaumekln/faster-whisper/) speech to text system.
 

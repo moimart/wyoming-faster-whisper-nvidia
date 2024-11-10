@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  wyoming-whisper:
+    container_name: wyoming-whisper
+    build: .
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia # Adjust if necessary
+              count: all # Utilize all available GPUs
+              capabilities: [gpu]
+    ports:
+      - "10300:10300"
+    restart: unless-stopped
